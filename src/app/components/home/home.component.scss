@@ -1,0 +1,297 @@
+/* General Styles */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.container {
+    padding: 0 20px;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #000000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Full-width container */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Profile Content */
+.profile-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Left Side: Profile Image */
+.profile-photo-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+/* Profile Image */
+.profile-photo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Right Side: Profile Details */
+.profile-details {
+    flex: 1;
+    width: 50%;
+    padding: 20px;
+}
+
+/* Text Styling */
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: slideInLeft 1.5s ease-in-out forwards;
+    animation-delay: 0.7s;
+}
+
+.title span {
+    background: linear-gradient(to right, #00aaff, #ff4e50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro-text {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    animation: slideInRight 1.5s ease-in-out forwards;
+    animation-delay: 1s;
+    color: rgb(255, 255, 255);
+}
+
+.name-text {
+    color: orange;
+}
+
+.electron-text {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: bold;
+    color: rgb(8, 193, 255);
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: slideInLeft 1.5s ease-in-out forwards;
+    animation-delay: 1.3s;
+}
+
+/* Typing Effect */
+.typing-text {
+    display: inline-block;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    // border-right: 2px solid rgb(8, 193, 255);
+}
+
+
+/* Blinking Cursor */
+.cursor {
+    font-weight: bold;
+    font-size: inherit;
+    color: rgb(0, 191, 255);
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Download Resume Button */
+.download-resume {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0000009b;
+    background: linear-gradient(145deg, #001a2c4a, #d6ebfa);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 4px 4px 10px #b0d4f7, -4px -4px 10px #ffffff;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Resume Button Hover Effect */
+.download-resume:hover {
+    background: linear-gradient(145deg, #06c3b0, #90caf9);
+    box-shadow: 6px 6px 15px #90caf9, -6px -6px 15px #e3f2fd;
+}
+
+.download-resume:active {
+    box-shadow: inset 4px 4px 10px #bbdefb, inset -4px -4px 10px #90caf9;
+}
+
+/* Social Icons - Centered Below */
+.social-icons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Social Icons Hover Effects */
+.social-icons a {
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons i {
+    font-size: 36px;
+    color: rgb(120 120 120 / 69%);
+}
+
+/* Hover Animations */
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.social-icons .linkedin:hover i {
+    color: #0077b5;
+}
+
+.social-icons .github:hover i {
+    color: #333;
+}
+
+.social-icons .twitter:hover i {
+    color: #1da1f2;
+}
+
+.social-icons .instagram:hover i {
+    color: #e4405f;
+}
+
+.social-icons .youtube:hover i {
+    color: #ff0000;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .profile-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-photo-container {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .profile-photo {
+        max-width: 400px;
+    }
+
+    .profile-details {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .intro-text {
+        font-size: 1.8rem;
+    }
+
+    .electron-text {
+        font-size: 1.5rem;
+    }
+
+    .download-resume {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+
+    .social-icons i {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hello-text, .intro-text, .electron-text {
+        word-wrap: break-word;
+    }
+}

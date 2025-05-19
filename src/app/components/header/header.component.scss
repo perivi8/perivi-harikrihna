@@ -1,0 +1,96 @@
+/* header.component.scss */
+
+/* Body styles */
+body {
+    padding-top: 56px; /* Ensure content is not hidden under the navbar */
+  }
+  
+  /* For larger screens, keep the navbar on the left */
+  .navbar-collapse {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  /* For smaller screens, hide the navbar and make it a sidebar that appears from the right */
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      position: fixed;
+      top: 0;
+      right: -250px;  /* Initially hidden off-screen to the right */
+      height: 100%;
+      width: 250px;
+      background-color: #000000;
+      transition: right 0.3s ease;
+      overflow-x: auto;  /* Allow horizontal scrolling */
+    }
+  
+    .navbar-collapse.show {
+      right: 0;  /* When active, the navbar slides in */
+    }
+  
+    /* Make the navbar items align vertically */
+    .navbar-nav {
+      flex-direction: column;
+      padding-top: 100px; /* Add space so it doesn't overlap the navbar */
+      gap: 20px;
+    }
+  
+    /* Ensure the navbar items are scrollable horizontally */
+    .navbar-nav {
+      display: flex;
+      flex-wrap: nowrap;  /* Keep all items in a single line */
+      overflow-x: auto;  /* Enable horizontal scroll */
+      padding: 0;
+      margin: 0;
+    }
+  
+    .navbar-nav .nav-item {
+      flex-shrink: 0;  /* Prevent items from shrinking */
+    }
+  
+    /* Make the navbar-toggler button easier to click on mobile */
+    .navbar-toggler {
+      z-index: 999;
+    }
+  
+    /* Adjust the background color for navbar when in mobile view */
+    .navbar-light.bg-light {
+      background-color: transparent !important;
+    }
+  }
+  
+  /* Add space between brand name and toggler icon */
+  .navbar-brand {
+    margin-right: 20px; /* Add space to the right of the brand */
+  }
+  
+  /* Custom styles for the toggle button */
+  .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D"http%3A//www.w3.org/2000/svg"%20width%3D"30"%20height%3D"30"%20viewBox%3D"0%200%2030%2030"%3E%3Cpath%20d%3D"M4%207h22M4%2015h22M4%2023h22"%20stroke%3D"%23222"%20stroke-width%3D"2"%3E%3C/path%3E%3C/svg%3E');
+  }
+  
+  .navbar-toggler-icon.close {
+    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D"http%3A//www.w3.org/2000/svg"%20width%3D"30"%20height%3D"30"%20viewBox%3D"0%200%2030%2030"%3E%3Cpath%20d%3D"M6%206l18%2018M6%2024L24%206"%20stroke%3D"%23222"%20stroke-width%3D"2"%3E%3C/path%3E%3C/svg%3E');
+  }
+
+
+
+.float-text {
+    font-size: 20px;
+    text-transform: uppercase;
+    animation: float 3s ease-in-out infinite;
+    text-shadow: 0 5px 10px rgba(4, 4, 4, 0.15); /* Optional shadow for 3D look */
+    font-weight: bold; /* Ensures the font is bold */
+}
+
+.font{
+    font-weight: bold;
+}
+
+
+
+.active{
+  color: #06c3b0 !important;
+  // text-decoration: underline;
+}
+  

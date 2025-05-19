@@ -1,0 +1,81 @@
+
+ <app-header></app-header>
+
+ <section class="profile">
+     <div class="profile-container">
+         <div class="profile-content">
+             <!-- Left Side: Profile Image (Modified) -->
+             <div class="profile-photo-container">
+                 <img src="../assets/profile.gif" alt="Perivi Harikrishna" class="profile-photo" style="height: 500px;">
+             </div>
+ 
+             <!-- Right Side: Details & Resume Button -->
+             <div class="profile-details">
+                <div class="container">
+                    <h1 class="title"><span>Hello!</span></h1>
+                    <h2 class="intro-text">I am <span class="name-text">Harikrishna,</span></h2>
+                    <h3 class="electron-text">
+                       <span class="typing-text"> An {{ currentWord }} <b class="cursor">|</b></span>
+                    </h3>
+                  </div>
+                  <br>
+                <div>
+
+                    <a href="../assets/PERIVI HARIKRISHNA.pdf" class="download-resume" download>Download Resume</a>
+                </div>  
+             </div>
+         </div>
+ 
+         <!-- Centered Social Links Below -->
+         <div class="social-icons">
+             <a href="https://www.linkedin.com/in/perivi-harikrishna-ab633324a/" target="_blank" class="linkedin">
+                 <i class="fa-brands fa-linkedin"></i>
+             </a>
+             <a href="https://github.com/perivi8" target="_blank" class="github">
+                 <i class="fa-brands fa-github"></i>
+             </a>
+             <a href="https://x.com/periviharikrish?s=21" target="_blank" class="twitter">
+                 <i class="fa-brands fa-x-twitter"></i>
+             </a>
+             <a href="https://www.instagram.com/toxic_hari_2002?igsh=MWJiaGY4Z3JlcGtwOQ%3D%3D&utm_source=qr" target="_blank" class="instagram">
+                 <i class="fa-brands fa-instagram"></i>
+             </a>
+             <a href="https://www.youtube.com/@NOOBS-777" target="_blank" class="youtube">
+                 <i class="fa-brands fa-youtube"></i>
+             </a>
+         </div>
+     </div>
+ </section>
+ <!-- <script>
+    const words = ["Frontend Developer", "Full Stack Developer", "Tech Enthusiast"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingElement = document.querySelector('.typing-text');
+
+    function typeEffect() {
+        const currentWord = words[wordIndex];
+        if (isDeleting) {
+            charIndex--;
+        } else {
+            charIndex++;
+        }
+
+        typingElement.textContent = currentWord.substring(0, charIndex);
+
+        if (!isDeleting && charIndex === currentWord.length) {
+            setTimeout(() => isDeleting = true, 1000); // Pause before deleting
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+        }
+
+        setTimeout(typeEffect, isDeleting ? 100 : 150); // Typing speed
+    }
+
+    document.addEventListener("DOMContentLoaded", typeEffect);
+</script> -->
+
+ 
+ <app-footer></app-footer>
+ 

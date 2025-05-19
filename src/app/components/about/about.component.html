@@ -1,0 +1,150 @@
+<body style="background-color: black">
+  <app-header></app-header>
+  <br />
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>About Me |Perivi Harikrishna</title>
+      <!-- Bootstrap -->
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+      />
+      <!-- Google Fonts -->
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet"
+      />
+      <style>
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(50px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .about-text,
+        .about-img {
+          opacity: 0; /* Initially hidden */
+          transform: translateY(50px);
+          animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        /* Staggered animation effect */
+        .about-text {
+          animation-delay: 0.3s;
+        }
+
+        .about-img {
+          animation-delay: 0.6s;
+        }
+
+        body {
+          background-color: #000;
+          color: #fff;
+          font-family: "Poppins", sans-serif;
+        }
+
+        .title {
+          text-align: center;
+          font-size: 2.5rem;
+          color: white;
+          font-weight: bold;
+        }
+
+        .title span {
+          background: linear-gradient(to right, #00aaff, #ff4e50);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .sub-title {
+          text-align: center;
+          color: #a1a1b5;
+          font-size: 20px;
+          margin-bottom: 50px;
+        }
+
+        .highlight {
+          color: orange;
+          font-weight: 600;
+          font-size: 20px;
+        }
+
+        h1 {
+          font-size: 40px;
+          font-weight: 700;
+          margin-top: 10px;
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 1.8;
+          color: #ddd;
+        }
+
+        .about-img img {
+          max-width: 100%;
+          height: auto;
+        }
+
+        /* Make sure image is responsive */
+        .about-img {
+          text-align: center;
+        }
+      </style>
+    </head>
+
+    <body>
+      <div class="container py-5">
+        <h1 class="title"><span>About Me</span></h1>
+        <p class="sub-title">Familiarizing Myself</p>
+
+        <!-- ✅ This is the trick -->
+        <div class="row align-items-center">
+          <!-- Text Left -->
+          <!-- Text Left -->
+<div class="col-md-6 order-2 order-md-1 about-text" style="padding: 23px;">
+    <p class="highlight">Hey there!</p>
+    <h1>I am Hari Krishna</h1>
+    <p>
+       I'm a developer with experience in both front-end and back-end technologies. I build responsive web apps using HTML, CSS, JavaScript, and Angular, and develop server-side logic with Python and Flask. I also work with SQL databases and have a strong interest in Machine Learning and Deep Learning.
+    </p>
+</div>
+
+<!-- Image Right -->
+<div class="col-md-6 order-1 order-md-2 about-img">
+    <img src="../assets/about.gif" alt="About Me Image" style="padding-bottom: 38px;">
+</div>
+
+        </div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+  </html>
+      <div class="social-icons">
+             <a href="https://www.linkedin.com/in/perivi-harikrishna-ab633324a/" target="_blank" class="linkedin">
+                 <i class="fa-brands fa-linkedin"></i>
+             </a>
+             <a href="https://github.com/perivi8" target="_blank" class="github">
+                 <i class="fa-brands fa-github"></i>
+             </a>
+             <a href="https://x.com/periviharikrish?s=21" target="_blank" class="twitter">
+                 <i class="fa-brands fa-x-twitter"></i>
+             </a>
+             <a href="https://www.instagram.com/toxic_hari_2002?igsh=MWJiaGY4Z3JlcGtwOQ%3D%3D&utm_source=qr" target="_blank" class="instagram">
+                 <i class="fa-brands fa-instagram"></i>
+             </a>
+             <a href="https://www.youtube.com/@NOOBS-777" target="_blank" class="youtube">
+                 <i class="fa-brands fa-youtube"></i>
+             </a>
+         </div>
+  <app-footer></app-footer>
+</body>

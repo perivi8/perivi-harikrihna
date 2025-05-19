@@ -1,0 +1,198 @@
+<body style="background-color: black">
+  <app-header></app-header>
+  <br />
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Experience Section</title>
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+      />
+      <style>
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(50px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .experience-card {
+          opacity: 0; /* Initially hidden */
+          transform: translateY(50px);
+          animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        /* Delay each card for a nice staggered effect */
+        .experience-card:nth-child(1) {
+          animation-delay: 0.3s;
+        }
+
+        .experience-card:nth-child(2) {
+          animation-delay: 0.6s;
+        }
+
+        .experience-card:nth-child(3) {
+          animation-delay: 0.9s;
+        }
+
+        body {
+          background: #000;
+          color: #fff;
+          font-family: "Poppins", sans-serif;
+        }
+
+        .title {
+          text-align: center;
+          font-size: 2.5rem;
+          color: white;
+          font-weight: bold;
+        }
+
+        .title span {
+          background: linear-gradient(to right, #00aaff, #ff4e50);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .section-title p {
+          color: #8f9bb7;
+          margin-top: 5px;
+        }
+
+        .experience-card {
+          background: rgba(0, 0, 0, 0.6);
+          padding: 20px;
+          border-radius: 10px;
+          transition: 0.4s ease-in-out;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          transform: scale(1);
+          color: #ccc;
+        }
+
+        .experience-card:hover {
+          transform: scale(1.03);
+          color: #fff;
+        }
+
+        /* Unique Shadows */
+        .experience-card.card-1 {
+          box-shadow: 0 0 10px #00ff4486;
+        }
+
+        .experience-card.card-1:hover {
+          box-shadow: 0 0 20px #00ff26;
+        }
+
+
+        .experience-card h5,
+        .experience-card h6,
+        .experience-card ul li,
+        .experience-card .tech-stack span {
+          transition: color 0.4s ease-in-out;
+        }
+
+        .tech-stack span {
+          display: inline-block;
+          background: #111;
+          color: #00e1ff;
+          padding: 5px 10px;
+          margin: 5px 5px 0 0;
+          border-radius: 5px;
+          font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+          .experience-card {
+            margin-bottom: 20px;
+          }
+        }
+      </style>
+    </head>
+
+    <body>
+      <section class="py-5">
+        <div class="container">
+          <div class="section-title">
+            <h1 class="title"><span>Experience</span></h1>
+          </div>
+          <br />
+          <div class="row gy-4">
+            <!--  -->
+            <div class="col-md-6 col-lg-6">
+              <div class="experience-card card-1">
+                <h5 style="color: #00e1ff; font-weight: bolder">
+                  Machine Learning Engineer
+                </h5>
+                <h6 style="font-weight: bold; color: rgb(255, 255, 255)">
+                  THIRUMOOLAR SOFTWARE PVT LTD , June 2024 - Present
+                </h6>
+                <ul>
+                  <li>
+                    Built and deployed machine learning models for NLP, computer
+                    vision, and predictive analytics using TensorFlow, Keras,
+                    and YOLO.
+                  </li>
+                  <li>
+                    Deployed ML models into production with Flask APIs, ensuring
+                    seamless integration with backend systems
+                  </li>
+                </ul>
+                <div class="tech-stack">
+                  <span>Angular</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>Python</span>
+                  <span>Flask</span>
+                  <span>YOLO</span>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+        
+            <!--  -->
+          </div>
+        </div>
+      </section>
+    </body>
+  </html>
+  <div class="social-icons">
+    <a
+      href="https://www.linkedin.com/in/perivi-harikrishna-ab633324a/"
+      target="_blank"
+      class="linkedin"
+    >
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/perivi8" target="_blank" class="github">
+      <i class="fa-brands fa-github"></i>
+    </a>
+    <a
+      href="https://x.com/periviharikrish?s=21"
+      target="_blank"
+      class="twitter"
+    >
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+    <a
+      href="https://www.instagram.com/toxic_hari_2002?igsh=MWJiaGY4Z3JlcGtwOQ%3D%3D&utm_source=qr"
+      target="_blank"
+      class="instagram"
+    >
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a
+      href="https://www.youtube.com/@NOOBS-777"
+      target="_blank"
+      class="youtube"
+    >
+      <i class="fa-brands fa-youtube"></i>
+    </a>
+  </div>
+  <app-footer></app-footer>
+</body>
