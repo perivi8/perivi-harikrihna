@@ -1,34 +1,67 @@
 {
-  "hash": "6a98824f",
-  "configHash": "d349038c",
-  "lockfileHash": "d47f2ca0",
-  "browserHash": "2ac97715",
+  "hash": "7346b689",
+  "configHash": "41d4d846",
+  "lockfileHash": "482ee838",
+  "browserHash": "cc004dba",
   "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "2b98889d",
+      "needsInterop": false
+    },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "564695c2",
+      "fileHash": "29a2a32c",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "9162e250",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "ab8749b2",
+      "fileHash": "e594154e",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "09ec9de6",
+      "fileHash": "14bc1918",
+      "needsInterop": false
+    },
+    "@emailjs/browser": {
+      "src": "../../../../../../node_modules/@emailjs/browser/es/index.js",
+      "file": "@emailjs_browser.js",
+      "fileHash": "477521cf",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "75e7eaf1",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-F7U72CD4": {
-      "file": "chunk-F7U72CD4.js"
+    "chunk-EQHOXT6B": {
+      "file": "chunk-EQHOXT6B.js"
     },
-    "chunk-MBENSOCI": {
-      "file": "chunk-MBENSOCI.js"
+    "chunk-TFVPFRN7": {
+      "file": "chunk-TFVPFRN7.js"
+    },
+    "chunk-HLIPVD2M": {
+      "file": "chunk-HLIPVD2M.js"
+    },
+    "chunk-JZFRVOZK": {
+      "file": "chunk-JZFRVOZK.js"
+    },
+    "chunk-WDMUDEB6": {
+      "file": "chunk-WDMUDEB6.js"
     }
   }
 }

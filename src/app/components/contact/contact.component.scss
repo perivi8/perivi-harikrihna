@@ -1,0 +1,93 @@
+.error-message {
+  color: #ff4757;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+.submit-message {
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.submit-message.success {
+  background-color: #2ed573;
+  color: white;
+}
+
+.submit-message.error {
+  background-color: #ff4757;
+  color: white;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+// Fix input text colors and styling
+.input, .textinput {
+  color: white !important;
+  background-color: #333 !important;
+  border: 1px solid #555 !important;
+  
+  &::placeholder {
+    color: #aaa !important;
+  }
+  
+  &:focus {
+    border-color: #007bff !important;
+    background-color: #444 !important;
+    color: white !important;
+    outline: none !important;
+  }
+}
+
+// Fix submit button styling - remove black background
+.submit-btn {
+  background-color: transparent !important;
+  border: 2px solid #06c3b0 !important;
+  color: #06c3b0 !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  
+  &:hover:not(:disabled) {
+    background-color: #06c3b0 !important;
+    color: white !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+  
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  &:disabled {
+    opacity: 0.6 !important;
+    cursor: not-allowed !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+}
+
+// Fix flex container and form wrapper backgrounds
+.form-wrapper, .container-block, .form-box {
+  background-color: transparent !important;
+}
+
+.responsive-container-block {
+  background-color: transparent !important;
+}
+
+// Remove any global black backgrounds affecting the button area
+* {
+  &:not(body):not(section) {
+    background-color: inherit !important;
+  }
+}

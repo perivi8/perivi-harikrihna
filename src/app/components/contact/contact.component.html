@@ -17,31 +17,53 @@
       <h1 class="title"><span>Contact</span></h1>
       <div class="responsive-container-block big-container">
         <div class="responsive-container-block container">
-          <form class="form-box">
+          <form class="form-box" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
             <div class="container-block form-wrapper" style="padding:0;">
               <div class="responsive-container-block">
                 <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6" id="i10mt">
                   <p class="text-blk input-title">FIRST NAME</p>
-                  <input class="input" id="ijowk" name="FirstName" placeholder="Please enter first name...">
+                  <input class="input" formControlName="firstName" placeholder="Please enter first name...">
+                  <div *ngIf="isFieldInvalid('firstName')" class="error-message">
+                    {{ getFieldError('firstName') }}
+                  </div>
                 </div>
                 <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
                   <p class="text-blk input-title">LAST NAME</p>
-                  <input class="input" id="indfi" name="Last Name" placeholder="Please enter last name...">
+                  <input class="input" formControlName="lastName" placeholder="Please enter last name...">
+                  <div *ngIf="isFieldInvalid('lastName')" class="error-message">
+                    {{ getFieldError('lastName') }}
+                  </div>
                 </div>
                 <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
                   <p class="text-blk input-title">EMAIL</p>
-                  <input class="input" id="ipmgh" name="Email" placeholder="Please enter email...">
+                  <input class="input" type="email" formControlName="email" placeholder="Please enter email...">
+                  <div *ngIf="isFieldInvalid('email')" class="error-message">
+                    {{ getFieldError('email') }}
+                  </div>
                 </div>
                 <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
                   <p class="text-blk input-title">PHONE NUMBER</p>
-                  <input class="input" id="imgis" name="PhoneNumber" placeholder="Please enter phone number...">
+                  <input class="input" type="tel" formControlName="phoneNumber" placeholder="Please enter phone number...">
+                  <div *ngIf="isFieldInvalid('phoneNumber')" class="error-message">
+                    {{ getFieldError('phoneNumber') }}
+                  </div>
                 </div>
                 <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i">
                   <p class="text-blk input-title">WHAT DO YOU HAVE IN MIND</p>
-                  <textarea class="textinput" id="i5vyy" placeholder="Please enter query..."></textarea>
+                  <textarea class="textinput" formControlName="query" placeholder="Please enter query..."></textarea>
+                  <div *ngIf="isFieldInvalid('query')" class="error-message">
+                    {{ getFieldError('query') }}
+                  </div>
                 </div>
               </div>
-              <button class="submit-btn">Submit</button>
+              <!-- Submit Message -->
+              <div *ngIf="submitMessage" class="submit-message" [ngClass]="{'success': submitSuccess, 'error': !submitSuccess}">
+                {{ submitMessage }}
+              </div>
+              <button type="submit" class="submit-btn" [disabled]="isSubmitting">
+                <span *ngIf="isSubmitting">Sending...</span>
+                <span *ngIf="!isSubmitting">Submit</span>
+              </button>
             </div>
           </form>
         </div>
